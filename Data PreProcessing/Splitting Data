@@ -1,1 +1,4 @@
-
+from sklearning.model_selection import train_test_split
+       X_train,X_test_Y_train,Y_test = train_test_split(X,Y,train_size=0.8,random_state=0)
+       print(X_train.shape,y_train.shape)
+       print(X_test.shape,y_test.shape)
