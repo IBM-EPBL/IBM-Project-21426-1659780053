@@ -1,1 +1,27 @@
+import os
+import base64
+import io
+import math
+from flask import Flask, render_template, Response, redirect, request, session, abort, url_for
+import mysql.connector
+import hashlib
+import datetime
+import calendar
+import random
+from random import randint
+from urllib.request import urlopen
+import webbrowser
 
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+from werkzeug.utils import secure_filename
+from PIL import Image
+
+import urllib.request
+import urllib.parse
+import socket    
+import csv
+
+import matplotlib.dates as mdates
+import seaborn as sn
