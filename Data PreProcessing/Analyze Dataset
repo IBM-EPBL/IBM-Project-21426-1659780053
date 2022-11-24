@@ -1,1 +1,12 @@
 
+ df_train = pd.read_csv(r"static/dataset/train.csv")
+    df_test= pd.read_csv(r"static/dataset/test.csv")
+    df_train.head()
+    df_train.nunique()
+    df_test.nunique()
+    df_train.isna().sum()
+    df_test.isna().sum()
+    dat=df_train.corr()
+    #print(dat)
+    col=['wind_speed(m/s)','atmospheric_temperature(C)','shaft_temperature(C)','blades_angle','gearbox_temperature(C)','engine_temperature(C)','motor_torque(N-m)','generator_temperature(C)','atmospheric_pressure(Pascal)','area_temperature(C)','windmill_body_temperature(C)','wind_direction','resistance(ohm)','rotor_torque(N-m)','blade_length(m)','blade_breadth(m)','windmill_height(m)']
+    data=[]
