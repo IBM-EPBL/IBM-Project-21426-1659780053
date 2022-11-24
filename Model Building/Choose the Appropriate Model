@@ -1,1 +1,31 @@
+from sklearn.tree import DecisionTreeRegressor
+    regressor_dt = DecisionTreeRegressor(random_state = 42)
+    regressor_dt.fit(X_train, y_train)
 
+    y_train_pred_dt = regressor_dt.predict(X_train)
+    y_test_pred_dt = regressor_dt.predict(X_test)
+
+    print(r2_score(y_true=y_train,y_pred=y_train_pred_dt))
+    print(r2_score(y_true=y_test,y_pred=y_test_pred_dt))
+
+ from sklearn.ensemble import RandomForestRegressor
+    regressor_rf = RandomForestRegressor(n_estimators=200, n_jobs=1, oob_score=True, random_state=42)
+    regressor_rf.fit(X_train, y_train)
+
+    y_train_pred_rf = regressor_rf.predict(X_train)
+    y_test_pred_rf = regressor_rf.predict(X_test)
+
+    #print(r2_score(y_true=y_train,y_pred=y_train_pred_rf))
+    #print(r2_score(y_true=y_test,y_pred=y_test_pred_rf))
+
+
+ from xgboost import XGBRegressor
+    regressor_xg = XGBRegressor(n_estimators=1000, max_depth=8, booster='gbtree', n_jobs=1, learning_rate=0.1, reg_lambda=0.01, reg_alpha=0.2)
+    regressor_xg.fit(X_train, y_train)
+
+    y_train_pred_xg = regressor_xg.predict(X_train)
+    y_test_pred_xg = regressor_xg.predict(X_test)
+
+    
+    print(r2_score(y_true=y_train,y_pred=y_train_pred_xg))
+    print(r2_score(y_true=y_test,y_pred=y_test_pred_xg))'''
