@@ -1,0 +1,5 @@
+Predicting the energy output of a wind turbine based on weather condition
+
+Demo Link:
+
+https://youtu.be/dmCVw-voXtU
